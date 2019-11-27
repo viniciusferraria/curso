@@ -8,7 +8,416 @@
       {
         "title": "Fluxo 1",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 130,
+                "y": 200
+              },
+              "angle": 0,
+              "id": "a87c8633-fe42-499a-b452-c600a19c6f80",
+              "z": 1,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "title": "Cadastro com identidade falsa"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "title": "Phishing"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "title": "Vazamento de informação"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Mobile"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 490,
+                "y": 200
+              },
+              "angle": 0,
+              "id": "f6756343-5e95-4da6-b76d-500c2d2559ff",
+              "z": 2,
+              "hasOpenThreats": true,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "title": "Alteração dos dados no cadastro"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "title": "Ganho de acesso não autorizado"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "title": "Acesso as informações dos usuários"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "title": "Indisponibilidade de algum serviço no processo"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Elevation of privilege",
+                  "title": "Acesso elevado no banco"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Cadastro"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "a87c8633-fe42-499a-b452-c600a19c6f80"
+              },
+              "target": {
+                "id": "f6756343-5e95-4da6-b76d-500c2d2559ff"
+              },
+              "vertices": [
+                {
+                  "x": 350,
+                  "y": 220
+                },
+                {
+                  "x": 390,
+                  "y": 220
+                },
+                {
+                  "x": 450,
+                  "y": 230
+                }
+              ],
+              "id": "6a336a1a-db85-4ea5-8be9-ccda56622bfd",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Envio do cadastro",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 3,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "title": "Alteração do pacote durante o envio"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "title": "Envio de requisição maliciosa"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "title": "Vazamento de informações durante o envio"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "title": "Indisponibilidade da api"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 470,
+                "y": 370
+              },
+              "angle": 0,
+              "id": "813b68e7-8914-43ef-b9d0-a70bb4796c1f",
+              "z": 4,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "title": "Acesso a conta não autorizada"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "title": "Acesso indevido"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "title": "Acesso indevido"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "title": "Acesso indevido"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "title": "Derrubar o banco"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "title": "Acesso indevido ao banco"
+                }
+              ],
+              "storesCredentials": true,
+              "isALog": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Base de dados"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "f6756343-5e95-4da6-b76d-500c2d2559ff"
+              },
+              "target": {
+                "id": "813b68e7-8914-43ef-b9d0-a70bb4796c1f"
+              },
+              "vertices": [
+                {
+                  "x": 560,
+                  "y": 340
+                }
+              ],
+              "id": "9aa30e6c-a7ec-430f-88c4-6920764635ba",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Persistência",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 5,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "title": "Acesso à rede"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "813b68e7-8914-43ef-b9d0-a70bb4796c1f"
+              },
+              "target": {
+                "id": "f6756343-5e95-4da6-b76d-500c2d2559ff"
+              },
+              "vertices": [
+                {
+                  "x": 520,
+                  "y": 350
+                },
+                {
+                  "x": 510,
+                  "y": 330
+                }
+              ],
+              "id": "a11b0a28-7e87-4593-a4b3-670e30ebb5f8",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5324726652260404,
+                    "offset": -29.93823217134565
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Resposta",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 7,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "title": "Vazamento de informações"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "f6756343-5e95-4da6-b76d-500c2d2559ff"
+              },
+              "target": {
+                "id": "a87c8633-fe42-499a-b452-c600a19c6f80"
+              },
+              "vertices": [
+                {
+                  "x": 400,
+                  "y": 260
+                }
+              ],
+              "id": "a1a120fe-e872-4de4-98b8-df7528866d0d",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5225289582226796,
+                    "offset": -1.159515090831693
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Resposta",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 8,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "title": "Vazamento de informação"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "title": "Indisponibilidade"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 3814.400390625
+        }
       }
     ]
   }
